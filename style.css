@@ -1,0 +1,204 @@
+html {
+  /* this affects all text in the website*/
+  font-size: 25px;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+}
+
+body {
+  border: 1px solid blue;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.media { /* need visible scrollbar and prevent top text from disappearing*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin-left: 70px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.media.flipped {
+  flex-direction: row-reverse;
+}
+
+.media img {
+  display: flex;
+  border-radius: 50%;
+  height: auto;
+  max-width: 100%;
+  margin-left: 20px;
+}
+
+.media .content {
+  max-width: 40%;
+}
+
+.media .content h1 {
+  font-size: 100px;
+  margin: 0;
+}
+
+.media .content h2 {
+  margin: 0;
+}
+
+.media .content p {
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+i.material-symbols-rounded { /* the "i" directly calls the thingy*/
+  font-family: "Material Symbols Rounded";
+  font-size: 40px;
+  display: table-cell;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  padding-top: 5px;
+  vertical-align: middle;
+  font-variation-settings: 
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 48;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+.main-menu:hover,
+nav.main-menu.expanded {
+  width: 250px;
+  overflow: visible;
+}
+
+.main-menu {
+  background: #ececec;
+  border-right: 1px solid #e5e5e5;
+  position: absolute;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 70px;
+  overflow: hidden;
+  -webkit-transition: width 0.05s linear;
+  transition: width 0.05s linear;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  z-index: 1000;
+}
+
+.main-menu > ul {
+  margin: 7px 0;
+}
+
+.main-menu > ul.logo-name{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.main-menu > ul.logo-name img {
+  height: 60px;
+  width: auto;
+  padding: 1px;
+}
+
+.main-menu > ul.logo-name span {
+  color: rgb(80, 80, 80);
+  font-size: 45px;
+  margin-left: 10px;
+  white-space:nowrap;
+}
+
+.main-menu li {
+  position: relative;
+  display: block;
+  width: 250px;
+}
+
+.main-menu li > a {
+  position: relative;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: rgb(80, 80, 80);
+  font-size: 30px;
+  text-decoration: none;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.main-menu .nav-text {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 190px;
+}
+
+.main-menu > ul.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.no-touch .scrollable.hover {
+  overflow-y: hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+  overflow-y: auto;
+  overflow: visible;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+nav ul,
+nav li {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+.main-menu li:hover > a,
+nav.main-menu li.active > a,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
+.dashboard-page nav.dashboard-menu ul li.active a {
+  color: #fff;
+  background-color: #5fa2db;
+}
+.area {
+  float: left;
+  background: #e2e2e2;
+  width: 100%;
+  height: 100%;
+}
